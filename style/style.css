@@ -1,0 +1,352 @@
+
+@import url('https://fonts.googleapis.com/css?family=Unbounded');
+
+
+* {
+    margin: 0;
+    font-family: Unbounded;
+}
+
+body {
+    background-color: #222721;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+/* .start-back {
+    background-color: #222721;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+} */
+section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .start {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .greeting {
+        /* max-width: 75%; */
+        /* height: 90%; */
+        color: white;
+        display: inline-block;
+        position: absolute;
+    }
+    #greet {
+        height: 40%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+    }
+    .container {
+        color: #e5e5e5;
+        /* position: absolute; */
+        height: 14rem;
+        font-size: 7rem;
+        text-transform: uppercase;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        /* border: 1px solid black; */
+        /* transition: 1s ease; */
+    }
+    @media screen and (max-width: 1620px) {
+        .container {
+            height: 12rem;
+            font-size: 6rem
+        }
+    }
+    @media screen and (max-width: 1380px) {
+        .container {
+            height: 10rem;
+            font-size: 5rem
+        }
+    }
+    @media screen and (max-width: 1171px) {
+        .container {
+            height: 10rem;
+            font-size: 4rem
+        }
+    }
+    .text-animation {
+        height: 50%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        top: 10%;
+        /* border: 1px solid black; */
+    }
+    .first-text, .second-text{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: 100%;
+        width: 100%;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 0;
+        position: relative;
+        text-shadow: 0 0 7px rgba(0,0,0,.0.5), 0 0 3px rgba(0,0,0,.0.5);
+    }
+    .first-text {
+        /* background-color:#56a5bf; */
+        /* background-color: rgba(86, 165, 191, 0.6); */
+        /* background-color: #0f4c8197; */
+        height: 100%;
+        width: 100%;
+    }
+    .second-text {
+        /* background-color: rgba(117, 70, 215, 0.6); */
+        background-color: white;
+        color: #222721;
+        height: 100%;
+        width: 100%;
+    }
+    .text-animation > div {
+        -webkit-animation: text-animation 4s infinite;
+                animation: text-animation 4s infinite;
+    }
+    @-webkit-keyframes text-animation {
+        0% {top: 0;}
+        20% {top: 0;}
+        40% {top: -100%;}
+        60% {top: -100%;}
+        80% {top: 0;}
+        100% {top: 0;}
+    }
+    @keyframes text-animation {
+        0% {top: 0;}
+        20% {top: 0;}
+        40% {top: -100%;}
+        60% {top: -100%;}
+        80% {top: 0;}
+        100% {top: 0;}
+    }
+
+    .arrows {
+        width: 60px;
+        height: 72px;
+        position: absolute;
+        left: 50%;
+        margin-left: -30px;
+        bottom: 20px;
+    }
+    
+    .arrows path {
+        stroke: white;
+        fill: transparent;
+        stroke-width: 1px;	
+        animation: arrow 2s infinite;
+        -webkit-animation: arrow 2s infinite; 
+    }
+    
+    @keyframes arrow
+    {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+    }
+    
+    @-webkit-keyframes arrow /*Safari and Chrome*/
+    {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+    }
+    
+    .arrows path.a1 {
+        animation-delay:-1s;
+        -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+    }
+    
+    .arrows path.a2 {
+        animation-delay:-0.5s;
+        -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+    }
+    
+    .arrows path.a3 {	
+        animation-delay:0s;
+        -webkit-animation-delay:0s; /* Safari 和 Chrome */
+    }
+
+    .projects {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .visual {
+        width: 40%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+    .project-img {
+        width: 95%;
+        position: relative;
+        border-radius: 10px;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    img.project {
+        border-radius: 10px;
+        filter: grayscale(100%);
+        transition: 0.2s;
+        box-shadow: -10px 10px 10px rgb(7, 13, 8);
+        cursor: pointer;
+    }
+    img.project:hover {
+        filter: grayscale(0%);
+        box-shadow:none;
+    }
+    .project-img:hover{
+        width: 100%;
+    }
+    .descript {
+        width: 40%;
+    }
+
+    .typewriter {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: wrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .10em; /* Adjust as needed */
+        color: white;
+        font-size: 1.5rem;
+        text-align: justify;
+        transform: translateX(20px);
+        opacity: 0;
+        transition: 1s;
+    }
+
+    @media screen and (max-width: 1620px) {
+        .typewriter {
+            font-size: 1.5rem;
+        }
+    }
+    @media screen and (max-width: 1380px) {
+        .typewriter {
+            font-size: 1.2rem;
+        }
+    }
+    @media screen and (max-width: 1171px) {
+        .typewriter {
+            font-size: 1rem;
+        }
+    }
+
+    .contacts {
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        /* background-color: #fff; */
+    }
+
+    .soc-medias {
+        width: 400px;
+        height:80px;
+        color: white;
+        font-size: 2rem;
+        top:40px;
+        left:100px;
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        opacity: 0;
+        transition: 0.2s;
+    }
+    .media {
+        width: 80px;
+        height: 100%;
+        background-color: #515c4e7f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        border-radius: 5px;
+    }
+    .layer1 {
+        width: 100%;
+        height: 100%;
+        background-color: #515c4e8d;
+        position: relative;
+    }
+    .layer2 {
+        width: 100%;
+        height: 100%;
+        background-color: #515c4eac;
+        position: relative;
+    }
+    .layer3 {
+        width: 100%;
+        height: 100%;
+        background-color: #778774ab;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .media div {
+        transition: 0.5s ease;
+        border-radius: 5px;
+    }
+    .media:hover div {
+        /* margin-left: 10px; */
+        transition: 0.5s ease;
+        transform: translate(5px, -5px);
+        /* transform: translateX(10px); */
+        /* animation: mediaPop 0.3s forwards; */
+    }
+    .media:hover .layer3 {
+        background-color: #778774;
+    }
+
+    #media-link {
+        color: white;
+        cursor: pointer;
+    }
+    .fa:hover{
+        opacity:1;
+    }
+    /* .media:hover .layer2 {
+        top: -10px;
+        right: -10px;
+    }
+    .media:hover .layer3 {
+        top: -10px;
+        right: -10px;
+    } */
+}
+
+
+
