@@ -210,6 +210,9 @@ section {
         display: flex;
         align-items: start;
         justify-content: center;
+        opacity: 0;
+        transition: 1s;
+        transform: translateX(-20px);
     }
     .project-img {
         width: 95%;

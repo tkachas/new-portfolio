@@ -10,6 +10,8 @@ let media = document.querySelector('.soc-medias');
 
 let descript = document.querySelectorAll('.typewriter');
 
+let prImages = document.querySelectorAll('.visual');
+
 
     // console.log(window.pageYOffset);
     for (let i = 0; i < descript.length; i++) {
@@ -21,6 +23,10 @@ let descript = document.querySelectorAll('.typewriter');
                     descript[i].style.transform = 'translateX(0px)';
                     // printingOut(descript[i]);
                     console.log('haha');
+                }
+                if (getComputedStyle(prImages[i]).opacity != '1') {
+                    prImages[i].style.opacity = '1';
+                    prImages[i].style.transform = 'translateX(0px)';
                 }
             }
             if (window.pageYOffset >= parseInt(getComputedStyle(startSection).height)){
