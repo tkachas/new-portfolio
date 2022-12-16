@@ -226,7 +226,7 @@ section {
     }
     img.project {
         border-radius: 10px;
-        filter: grayscale(100%);
+        /* filter: grayscale(100%); */
         transition: 0.2s;
         box-shadow: -10px 10px 10px rgb(7, 13, 8);
         cursor: pointer;
