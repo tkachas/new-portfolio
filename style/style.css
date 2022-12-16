@@ -215,11 +215,14 @@ section {
         transform: translateX(-20px);
     }
     .project-img {
-        width: 95%;
+        max-width: 95%;
         position: relative;
         border-radius: 10px;
         transition: 0.2s;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     img.project {
         border-radius: 10px;
@@ -230,11 +233,15 @@ section {
     }
     img.project:hover {
         filter: grayscale(0%);
+        transform: scale(1.1);
         box-shadow:none;
     }
-    .project-img:hover{
-        width: 100%;
+    .project-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    
     .descript {
         width: 40%;
     }
@@ -280,7 +287,7 @@ section {
         height:80px;
         color: white;
         font-size: 2rem;
-        top:40px;
+        top:20px;
         left:100px;
         display: flex;
         justify-content: space-around;
