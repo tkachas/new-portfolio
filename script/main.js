@@ -13,12 +13,20 @@ let descript = document.querySelectorAll('.typewriter');
 
 let prImages = document.querySelectorAll('.visual');
 
+let scroll = document.querySelector('.cont');
+
 
     // console.log(window.pageYOffset);
     for (let i = 0; i < descript.length; i++) {
-        window.addEventListener('scroll', ()=> {
-        
-            if (window.pageYOffset == parseInt(getComputedStyle(startSection).height) * (i+1)) {
+        scroll.addEventListener('scroll', ()=> {
+
+            console.log(scroll.scrollTop);
+            if (scroll.scrollTop >= 70) {
+                arrows.style.opacity = '0';
+            } else {
+                arrows.style.opacity = '1';
+            }
+            if (scroll.scrollTop >= parseInt(getComputedStyle(startSection).height) * (i+1)) {
                 if (getComputedStyle(descript[i]).opacity != '1'){
                     descript[i].style.opacity = '1';
                     descript[i].style.transform = 'translateX(0px)';

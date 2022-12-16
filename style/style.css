@@ -4,14 +4,26 @@
 
 * {
     margin: 0;
+    padding: 0;
     font-family: Unbounded;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #222721;
+    /* -ms-scroll-snap-type: mandatory;
+        scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
     -ms-scroll-snap-type: y mandatory;
         scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    height: 100vh; */
+}
+
+.cont {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 /* .start-back {
@@ -38,13 +50,14 @@ section {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+        
     }
     .greeting {
         /* max-width: 75%; */
         /* height: 90%; */
         color: white;
         display: inline-block;
-        position: absolute;
+        /* position: absolute; */
     }
     #greet {
         height: 40%;
