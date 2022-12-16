@@ -1,3 +1,4 @@
+'use strict'
 let greet = document.querySelector('.greeting');
 
 let arrows = document.querySelector('.arrows');
