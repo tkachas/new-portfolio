@@ -337,7 +337,7 @@ section {
     }
     @media screen and (max-width: 1171px) {
         .typewriter {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     }
 
@@ -675,7 +675,7 @@ section {
                 transform: translateX(-20px);
     }
     .project-img {
-        max-width: 100%;
+        max-width: 55%;
         position: relative;
         border-radius: 10px;
         -webkit-transition: 0.2s;
@@ -692,6 +692,7 @@ section {
             -ms-flex-align: center;
                 align-items: center;
     }
+
     img.project {
         border-radius: 10px;
         /* filter: grayscale(100%); */
@@ -742,7 +743,20 @@ section {
     }
     @media screen and (min-width: 700px) {
         .typewriter {
-            font-size: 1.5rem
+            font-size: 1rem
+        }
+    }
+    @media screen and (min-width: 400px) {
+        .typewriter {
+            font-size: 0.7rem
+        }
+    }
+    @media screen and (min-width: 300px) {
+        .typewriter {
+            font-size: 0.6rem
+        }
+        .project-img {
+            max-width: 50%;
         }
     }
     @media screen and (max-width: 300px) {
